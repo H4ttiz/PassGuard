@@ -1,0 +1,21 @@
+# arquivos sensíveis
+.env
+
+# dependências
+/vendor
+/node_modules
+
+# logs e arquivos gerados
+/storage/logs/*
+/storage/backups/*
+
+# sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# cache
+*.log
