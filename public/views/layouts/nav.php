@@ -1,73 +1,82 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-  <div class="container">
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
 
-    <a class="navbar-brand fw-bold" href="?page=dashboard">
-      🔐 SafeVault
+    <a class="navbar-brand me-auto" href="?page=home">
+      <img class="icon" src="assets/img/icon.png" alt="Icon">
+      <span>PassGuard</span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
-    <div class="collapse navbar-collapse" id="navbarMain">
-
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-        <li class="nav-item">
-          <a class="nav-link <?= $page == 'dashboard' ? 'active fw-bold' : '' ?>" href="?page=dashboard">
-            Home
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link <?= $page == 'contas' ? 'active fw-bold' : '' ?>" href="?page=contas">
-            Contas
-          </a>
-        </li>
-
-      </ul>
-
-      <div class="d-flex align-items-center gap-3">
-
-        <a href="?page=nova-senha" class="btn btn-success btn-sm">
-          + Nova Senha
-        </a>
-
-        <div class="dropdown">
-
-          <a 
-            class="text-white text-decoration-none dropdown-toggle"
-            href="#" 
-            role="button" 
-            data-bs-toggle="dropdown"
-          >
-            👤 Leonardo
-          </a>
-
-          <ul class="dropdown-menu dropdown-menu-end">
-
-            <li>
-              <a 
-                class="dropdown-item <?= $page == 'perfil' ? 'active' : '' ?>" 
-                href="?page=perfil"
-              >
-                Minha Conta
-              </a>
-            </li>
-
-            <li><hr class="dropdown-divider"></li>
-
-            <li>
-              <a class="dropdown-item text-danger" href="?page=logout">
-                Sair
-              </a>
-            </li>
-
-          </ul>
-        </div>
-
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+          <img class="icon" src="assets/img/icon.png" alt="Icon">
+          <span>PassGuard</span>
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
 
+      <div class="offcanvas-body">
+
+        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+
+          <li class="nav-item">
+            <a class="truenav nav-link mx-lg-2 <?= $page == 'home' ? 'active' : '' ?>" 
+              href="?page=home">
+              Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="truenav nav-link mx-lg-2 <?= $page == 'dashboard' ? 'active' : '' ?>" 
+              href="?page=dashboard">
+              Dashboard
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="truenav nav-link mx-lg-2 <?= $page == 'contas' ? 'active' : '' ?>" 
+              href="?page=contas">
+              Cadastrar Contas
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
+    <div class="dropdown">
+
+            <a 
+              class=" nav-link mx-lg-2 text-black text-decoration-none dropdown-toggle"
+              href="#" 
+              role="button" 
+              data-bs-toggle="dropdown"
+            >
+              👤 Leonardo
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-end">
+
+              <li>
+                <a 
+                  class="dropdown-item <?= $page == 'perfil' ? 'active' : '' ?>" 
+                  href="?page=perfil"
+                >
+                  Minha Conta
+                </a>
+              </li>
+
+              <li><hr class="dropdown-divider"></li>
+
+              <li>
+                <a class="dropdown-item text-danger" href="?page=logout">
+                  Sair
+                </a>
+              </li>
+
+            </ul>
+          </div>
+          <button class="navbar-toggler pe-0" type="button"    data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
   </div>
 </nav>

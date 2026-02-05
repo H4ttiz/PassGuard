@@ -17,6 +17,10 @@ switch ($page) {
         $view = $base . '/views/auth/registro.php';
         break;
 
+    case 'home':
+        $view = $base . '/views/home/home.php';
+        break;
+
     case 'dashboard':
         $view = $base . '/views/dashboard/dashboard.php';
         break;
@@ -47,3 +51,5 @@ include $view;
 
 
 include $base . '/views/layouts/footer.php';
+
+?>
