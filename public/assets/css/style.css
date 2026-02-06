@@ -1,21 +1,29 @@
-/* Nav bar */
-.navbar-toggler {
-    border: none;
-    font-size: 1.25rem;
+/* RESET */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0d0d12;
 }
-.navbar{
-    background-color: #fff;
+
+
+/* ================= NAVBAR DESKTOP ================= */
+
+.navbar {
+    background-color: #15151d; /* sólido */
     height: 80px;
     margin: 20px;
     border-radius: 16px;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
 }
 
 .navbar-brand {
-    font-weight: 500;
-    color: #009970;
-    font-size: 24px;
-    transition: 0.3s color;
+    font-weight: 600;
+    font-size: 22px;
+    color: #b388ff !important;
+}
+
+.navbar-toggler {
+    border: none;
 }
 
 .navbar-toggler:focus,
@@ -24,53 +32,118 @@
     outline: none;
 }
 
-.icon{
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    vertical-align: middle;
-}
 
+/* links desktop */
 .truenav {
-    color: #666777;
+    color: #cfcfcf !important;
     font-weight: 500;
-    position: relative;
+    transition: 0.25s;
 }
 
-.truenav:hover,
+.truenav:hover {
+    color: #b388ff !important;
+}
+
 .truenav.active {
-    color: #000;
+    color: #b388ff !important;
 }
-@media (min-width: 991px){
-    .truenav::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 2px;
-        background-color: #009970;
-        visibility: hidden;
-        transition: 0.3s ease-in-out;
-    }
 
-    .navbar{
-        background: rgba(255, 255, 255, 0.2); 
-        backdrop-filter: blur(10px);          
-        -webkit-backdrop-filter: blur(10px);
-    }
 
-    .truenav:hover:before,
-    .truenav.active:before{
-        width: 100%;
-        visibility: visible;
-    }
+/* ================= OFFCANVAS (MOBILE) ================= */
+
+.offcanvas {
+    background-color: #121218 !important; /* sólido dark */
+    color: white;
+    width: 260px;
 }
-/* .teste0101{
-    background-color: #009970;
-    height: 100vh; 
-    width: 100vw; 
-    margin: 0 auto;
-} */
 
+/* header */
+.offcanvas-header {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* botão fechar branco */
+.btn-close {
+    filter: invert(1);
+}
+
+/* body */
+.offcanvas-body {
+    padding-top: 20px;
+}
+
+/* links mobile */
+.offcanvas .truenav {
+    display: block;
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin-bottom: 6px;
+}
+
+.offcanvas .truenav:hover {
+    background-color: #1f1f2b;
+    color: #b388ff !important;
+}
+
+.offcanvas .truenav.active {
+    background-color: #2a1f40;
+    color: #b388ff !important;
+}
+
+
+/* ================= BANNER ================= */
+
+.main-banner {
+    background-image: url(../img/Banner-homepage.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* ================= HERO CARD ================= */
+
+.glass-box {
+    background-color: #181822; /* sólido agora */
+    border-radius: 18px;
+    padding: 40px 50px;
+    text-align: center;
+    color: white;
+    max-width: 500px;
+
+    box-shadow: 0 0 35px rgba(123, 77, 255, 0.35);
+}
+
+.username {
+    color: #b388ff;
+}
+
+
+/* ================= BOTÃO ================= */
+
+.btn-purple {
+    background-color: #7b4dff;
+    color: white;
+    border: none;
+    transition: 0.25s;
+}
+
+.btn-purple:hover {
+    background-color: #6a3de8;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(160, 120, 255, 0.6);
+}
+
+
+/* ================= ICON ================= */
+
+.icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}

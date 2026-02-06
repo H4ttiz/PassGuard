@@ -13,7 +13,7 @@
           <img class="icon" src="assets/img/icon.png" alt="Icon">
           <span>PassGuard</span>
         </h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
       </div>
 
       <div class="offcanvas-body">
